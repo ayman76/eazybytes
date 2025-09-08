@@ -9,8 +9,10 @@ public class Example1 {
     public static void main(String[] args) {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
-        Vehicle primaryVehicle = context.getBean(Vehicle.class);
-        System.out.println("Primary Vehicle Name from spring context is: " + primaryVehicle.getName());
+        Vehicle vehicle = context.getBean(Vehicle.class);
+        System.out.println("Component Vehicle Name from spring context is: " + vehicle.getName());
+        vehicle.printHello();
+
 
     }
 }
