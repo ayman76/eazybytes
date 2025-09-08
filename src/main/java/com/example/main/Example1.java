@@ -9,14 +9,14 @@ public class Example1 {
     public static void main(String[] args) {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
-        Vehicle vehicle1 = context.getBean("vehicle1",Vehicle.class);
-        System.out.println("Vehicle Name from spring context is: " + vehicle1.getName());
+        Vehicle audiVehicle = context.getBean("AudiVehicle",Vehicle.class);
+        System.out.println("Vehicle Name from spring context is: " + audiVehicle.getName());
 
-        Vehicle vehicle2 = context.getBean("vehicle2",Vehicle.class);
-        System.out.println("Vehicle Name from spring context is: " + vehicle2.getName());
+        Vehicle hondaVehicle = context.getBean("HondaVehicle",Vehicle.class);
+        System.out.println("Vehicle Name from spring context is: " + hondaVehicle.getName());
 
-        Vehicle vehicle3 = context.getBean("vehicle3",Vehicle.class);
-        System.out.println("Vehicle Name from spring context is: " + vehicle3.getName());
+        Vehicle ferrariVehicle = context.getBean("FerrariVehicle",Vehicle.class);
+        System.out.println("Vehicle Name from spring context is: " + ferrariVehicle.getName());
 
     }
 }
