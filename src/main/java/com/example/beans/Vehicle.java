@@ -16,4 +16,11 @@ public class Vehicle {
     public void printHello() {
         System.out.println("Printing Hello from Component vehicle Bean");
     }
+
+    public void initialize(){
+        this.name = "Ferrari";
+    }
+    public void destroy(){
+        System.out.println("Destroying vehicle bean");
+    }
 }
