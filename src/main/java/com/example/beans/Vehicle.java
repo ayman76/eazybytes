@@ -1,10 +1,6 @@
 package com.example.beans;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
-import org.springframework.stereotype.Component;
 
-@Component
 public class Vehicle {
 
     private String name;
@@ -17,18 +13,7 @@ public class Vehicle {
         this.name = name;
     }
 
-    public void printHello(){
+    public void printHello() {
         System.out.println("Printing Hello from Component vehicle Bean");
-    }
-
-    @PostConstruct
-    public void initialize(){
-        this.name = "Honda";
-    }
-
-    @PreDestroy
-    public void destroy(){
-        System.out.println("Destroying vehicle bean");
-
     }
 }
