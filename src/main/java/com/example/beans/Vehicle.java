@@ -5,6 +5,10 @@ public class Vehicle {
 
     private String name;
 
+    public Vehicle() {
+        System.out.println("Vehicle bean created by Spring");
+    }
+
     public String getName() {
         return name;
     }
@@ -17,10 +21,8 @@ public class Vehicle {
         System.out.println("Printing Hello from Component vehicle Bean");
     }
 
-    public void initialize(){
-        this.name = "Ferrari";
-    }
-    public void destroy(){
-        System.out.println("Destroying vehicle bean");
+    @Override
+    public String toString() {
+        return "Vehicle name: "+ name;
     }
 }
