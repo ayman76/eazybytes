@@ -1,15 +1,20 @@
 package com.example.beans;
 
 
+import com.example.services.VehicleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Vehicle {
 
-    private String name = "Toyota";
+    private String name;
+    private final VehicleService vehicleService;
 
-    public Vehicle() {
-        System.out.println("Vehicle bean created by Spring");
+    @Autowired
+    public Vehicle(VehicleService vehicleService) {
+        this.vehicleService = vehicleService;
+
     }
 
     public String getName() {
@@ -27,5 +32,9 @@ public class Vehicle {
     @Override
     public String toString() {
         return "Vehicle name: "+ name;
+    }
+
+    public VehicleService getVehicleService() {
+        return vehicleService;
     }
 }

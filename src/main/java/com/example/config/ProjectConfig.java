@@ -4,7 +4,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "com.example.beans")
+@ComponentScan(basePackages = {"com.example.implementation", "com.example.services"})
+@ComponentScan(basePackageClasses = {com.example.beans.Person.class, com.example.beans.Vehicle.class})
 public class ProjectConfig {
 
 }
